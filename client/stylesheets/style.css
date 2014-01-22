@@ -1,0 +1,58 @@
+.wine {
+	background: #fff;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+body {
+	background: #ccc;
+	color: #666;
+}
+
+.navbar { margin-bottom: 10px;}
+.navbar .navbar-inner {
+	border-radius: 0px 0px 3px 3px;
+}
+
+.wine {
+	*zoom: 1;
+	--webkit-transition: all 300ms 0ms;
+	--webkit-transition-delay: ease-in;
+	--moz-transition: all 300ms 0ms ease-in;
+	-o-transition: all 300ms 0ms ease-in;
+	transition: all 300ms 0ms ease-in;
+	position: relative;
+	opacity: 1;
+}
+
+.wine:before, .wine:after {
+	content: "";
+	display: table;
+}
+
+.wine:after {
+	clear: both;
+}
+
+.wine .wine-content { float: left;}
+.wine .wine-content h3 {
+	margin: 0;
+	line-height: 1.4;
+	font-size: 18px;
+}
+
+.wine .wine-content h3 .year {
+	font-weight: normal;
+	border-right: 1px solid;
+	padding-right: 0.3em;
+}
+
+.wine .wine-content h3 span {
+	font-weight: lighter;
+	font-size: 14px;
+	font-style: italic;
+	display: inline-block;
+	color: #aaaaaa;
+}

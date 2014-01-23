@@ -36,6 +36,8 @@ body {
 	clear: both;
 }
 
+#spinner { height: 300px }
+
 .wine .wine-content { float: left;}
 .wine .wine-content h3 {
 	margin: 0;

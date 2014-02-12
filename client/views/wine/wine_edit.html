@@ -1,0 +1,37 @@
+<template name="wineEdit"> 
+<form class="main">
+	<div class="control-group">
+		<label class="control-label" for="name">Name</label> 
+		<div class="controls">
+			<input name="name" type="text" value="{{name}}" placeholder="Name of the Wine"/> 
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="producer">Wine Produced</label> 
+		<div class="controls">
+			<input name="producer" type="text" value="{{producer}}" placeholder="Wine producer/Wineyard"/>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="country">Country</label> 
+		<div class="controls">
+			<input name="country" type="text" value="{{country}}" placeholder="Country of the Wine"/>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="year">Year</label> 
+		<div class="controls">
+			<input name="year" type="number" value="{{year}}" placeholder="Year"/>
+		</div>
+	</div>
+	<div class="control-group"> <div class="controls">
+		<input type="submit" value="Submit" class="btn btn-primary submit"/> </div>
+	</div> 
+	<hr/>
+	<div id="control-group">
+		<div class="controls">
+			<a class="btn btn-danger delete" href="#">Delete Wine</a>
+		</div>
+	</div>
+</form>
+</template>

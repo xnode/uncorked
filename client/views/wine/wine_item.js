@@ -5,5 +5,9 @@ Template.wineItem.helpers({
 		} else {
 			return '0000';
 		}
+	},
+
+	ownWine: function() {
+		return Meteor.user() && this.creatorId == Meteor.userId();
 	}	
 });

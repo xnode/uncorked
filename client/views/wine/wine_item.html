@@ -4,5 +4,6 @@
 			<h3><em class="year">{{niceYear}}</em> {{name}} <span class="country">{{country}}</span></h3>
 		</div>
 		<a href="{{pathFor 'winePage'}}" class="view btn">View</a>
+		{{#if ownWine}} <a href="{{pathFor 'wineEdit'}}">Edit</a>{{/if}}
 	</div>
 </template>

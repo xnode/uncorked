@@ -1,31 +1,25 @@
-<template name="wineAdd"> 
-<form class="main">
-	<div class="control-group">
-		<label class="control-label" for="name">Name</label> 
-		<div class="controls">
-			<input name="name" type="text" value="" placeholder="Name of the Wine"/> 
-		</div>
+<template name="wineAdd">
+<div class="panel"> 
+<form class="panel-body" role="form">
+	<div class="form-group">
+		<label for="name">Name</label> 
+		<input name="name" type="text" class="form-control" value="" placeholder="Name of the Wine"/> 
 	</div>
-	<div class="control-group">
-		<label class="control-label" for="producer">Wine Produced</label> 
-		<div class="controls">
-			<input name="producer" type="text" value="" placeholder="Wine producer/Wineyard"/>
-		</div>
+	<div class="form-group">
+		<label for="producer">Wine Producer</label> 
+		<input name="producer" type="text" class="form-control" value="" placeholder="Wine producer/Wineyard"/>
 	</div>
-	<div class="control-group">
-		<label class="control-label" for="country">Country</label> 
-		<div class="controls">
-			<input name="country" type="text" value="" placeholder="Country of the Wine"/>
-		</div>
+	<div class="form-group">
+		<label for="country">Country</label> 
+		<input name="country" type="text" class="form-control" value="" placeholder="Country of the Wine"/>
 	</div>
-	<div class="control-group">
-		<label class="control-label" for="year">Year</label> 
-		<div class="controls">
-			<input name="year" type="number" value="2014" placeholder="Year"/>
-		</div>
+	<div class="form-group">
+		<label for="year">Year</label> 
+		<input name="year" type="number" class="form-control" value="2014" placeholder="Year"/>
 	</div>
-	<div class="control-group"> <div class="controls">
-		<input type="submit" value="Submit" class="btn btn-primary"/> </div>
+	<div class="form-group">
+		<input type="submit" value="Add" class="btn btn-primary"/>
 	</div> 
 </form>
+</div>
 </template>

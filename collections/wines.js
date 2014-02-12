@@ -1,6 +1,7 @@
 Wines = new Meteor.Collection('wines');
 Grapes = new Meteor.Collection('grapes');
 Checkins = new Meteor.Collection('checkins');
+
 Wines.allow({
 	update: ownsDocument,
 	remove: ownsDocument

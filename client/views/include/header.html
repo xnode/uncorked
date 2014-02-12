@@ -1,15 +1,25 @@
 <template name="header"> 
-<header class="navbar">
-<div class="navbar-inner">
-	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span> </a>
-	<a class="brand" href="{{pathFor 'winesList'}}">Uncorked</a> 
-	<div class="nav-collapse collapse">
-		{{#if currentUser}}<ul class="nav"><li><a href="{{pathFor 'wineAdd'}}">New Wine</a></li></ul>{{/if}}
-		<ul class="nav pull-right"> <li>{{loginButtons}}</li> </ul>
-	</div>
+<nav class="navbar navbar-default" role="navigation">
+<div class="container-fluid">
+
+<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#uncorked-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="{{pathFor 'winesList'}}"><span class="glyphicon glyphicon-glass"></span> Uncorked</a> 
+</div>
+
+<div class="collapse navbar-collapse" id="uncorked-navbar-collapse">
+{{#if currentUser}}
+	<ul class="nav navbar-nav"><li><a href="{{pathFor 'wineAdd'}}"><span class="glyphicon glyphicon-plus"></span> New Wine</a></li></ul>
+{{/if}}
+	<ul class="nav navbar-nav navbar-right">
+		{{loginButtons}}
+	</ul>
+</div>
 </div> 
-</header> 
+</nav> 
 </template>

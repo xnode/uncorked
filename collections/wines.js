@@ -1,7 +1,14 @@
 Wines = new Meteor.Collection('wines');
 Grapes = new Meteor.Collection('grapes');
 Checkins = new Meteor.Collection('checkins');
-
+Wines.allow({
+	update: function(userId, doc) {
+		return userId && doc.creatorId == userId;
+	},
+	remove: function(userId, doc) {
+		return userId && doc.creatorId == userId;
+	}
+});
 Meteor.methods({
 	wineadd: function(wineAttributes) {
 		var user = Meteor.user();

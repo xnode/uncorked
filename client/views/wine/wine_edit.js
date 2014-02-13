@@ -12,7 +12,7 @@ Template.wineEdit.events({
 
 		Wines.update(currentWineId, {$set: wineProperties}, function(error) {
 			if (error) {
-				alert(error);
+				Errors.throw(error);
 			} else {
 				Router.go('winePage', {_id: currentWineId});
 			}

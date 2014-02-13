@@ -11,7 +11,7 @@ Template.wineAdd.events({
 
 		Meteor.call('wineadd', wine, function(error, id) {
 			if (error)
-				alert(error.reason); // DEBUG
+				Errors.throw(error.reason);
 			Router.go('winePage', {_id: id});
 		});
 	}

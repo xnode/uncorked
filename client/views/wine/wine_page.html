@@ -1,3 +1,14 @@
 <template name="winePage"> 
 	{{> wineItem}}
+
+	{{#if currentUser}} 
+		{{> checkinForm}}
+	{{else}}
+		<p>Please log in to checkin.</p>
+	{{/if}}
+	<ul class="checkins">
+		{{#each checkins}}
+			{{> checkin}}
+		{{/each}}
+	</ul>
 </template>

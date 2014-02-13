@@ -36,6 +36,24 @@ Meteor.methods({
 
 		var wineId = Wines.insert(wine);
 		return wineId;
+	},
+
+	checkin: function(checkinAttributes) {
+		var user =  Meteor.user();
+		var wine = Wines.findOne(checkinAttributes.wineId);
+
+		if (!user)
+			throw new Meteor.Error(401, "You need to login to checkin");
+		if (!wine)
+			throw new Meteor.Error(422, 'You must checkin to a wine.');
+		
+		checkin = _.extend(_.pick(checkinAttributes, 'wineId'), { 
+			userId: user._id,
+			username: user.username,
+			submitted: new Date().getTime()
+		});
+		
+		return Checkins.insert(checkin);
 	}
 })
 

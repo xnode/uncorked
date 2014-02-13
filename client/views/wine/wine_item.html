@@ -5,7 +5,7 @@
 		</div>
 		<div class="actions">
 		{{#if ownWine}} <a href="{{pathFor 'wineEdit'}}" class="btn btn-primary">Edit</a>{{/if}}
-		<a href="{{pathFor 'winePage'}}" class="btn btn-default">View</a>
+		<a href="{{pathFor 'winePage'}}" class="btn btn-default">View <span class="checkins">({{checkinCount}})</span></a>
 		</div>
 	</div>
 </template>

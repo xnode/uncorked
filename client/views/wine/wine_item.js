@@ -9,9 +9,5 @@ Template.wineItem.helpers({
 
 	ownWine: function() {
 		return Meteor.user() && this.creatorId == Meteor.userId();
-	},
-
-	checkinCount: function() {
-		return Checkins.find({wineId: this._id}).count();
-	}	
+	}
 });

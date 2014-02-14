@@ -31,7 +31,9 @@ Meteor.methods({
 
 		var wine = _.extend(_.pick(wineAttributes, 'name', 'producer', 'year', 'country'), {
 			creatorId: user._id,
-			submitted: new Date().getTime()
+			submitted: new Date().getTime(),
+			checkins: 0,
+			score: 0
 		});
 
 		var wineId = Wines.insert(wine);
@@ -52,6 +54,7 @@ Meteor.methods({
 			username: user.username,
 			submitted: new Date().getTime()
 		});
+		Wines.update(checkin.wineId, {$inc: {checkinCount: 1}});
 		
 		return Checkins.insert(checkin);
 	}
